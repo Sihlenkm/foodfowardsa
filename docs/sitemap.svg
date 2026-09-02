@@ -1,0 +1,42 @@
+<svg width="800" height="420" viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Home node -->
+  <rect x="330" y="20" width="140" height="50" rx="8" fill="#2E7D32" stroke="#2E7D32" stroke-width="2"/>
+  <text x="400" y="42" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Home</text>
+  <text x="400" y="58" font-family="Arial, sans-serif" font-size="11" fill="#e2f2e0" text-anchor="middle">index.html</text>
+
+  <!-- connectors -->
+  <line x1="400" y1="70" x2="120" y2="150" stroke="#999999" stroke-width="1.5"/>
+  <line x1="400" y1="70" x2="290" y2="150" stroke="#999999" stroke-width="1.5"/>
+  <line x1="400" y1="70" x2="460" y2="150" stroke="#999999" stroke-width="1.5"/>
+  <line x1="400" y1="70" x2="630" y2="150" stroke="#999999" stroke-width="1.5"/>
+
+  <!-- About -->
+  <rect x="50" y="150" width="140" height="50" rx="8" fill="#EAF6E7" stroke="#2E7D32" stroke-width="2"/>
+  <text x="120" y="172" font-family="Arial, sans-serif" font-size="14" fill="#222222" text-anchor="middle">About Us</text>
+  <text x="120" y="188" font-family="Arial, sans-serif" font-size="11" fill="#555555" text-anchor="middle">about.html</text>
+
+  <!-- Services -->
+  <rect x="220" y="150" width="140" height="50" rx="8" fill="#EAF6E7" stroke="#2E7D32" stroke-width="2"/>
+  <text x="290" y="172" font-family="Arial, sans-serif" font-size="14" fill="#222222" text-anchor="middle">Our Programmes</text>
+  <text x="290" y="188" font-family="Arial, sans-serif" font-size="11" fill="#555555" text-anchor="middle">services.html</text>
+
+  <!-- Enquiry -->
+  <rect x="390" y="150" width="140" height="50" rx="8" fill="#EAF6E7" stroke="#2E7D32" stroke-width="2"/>
+  <text x="460" y="172" font-family="Arial, sans-serif" font-size="14" fill="#222222" text-anchor="middle">Enquiry</text>
+  <text x="460" y="188" font-family="Arial, sans-serif" font-size="11" fill="#555555" text-anchor="middle">enquiry.html</text>
+
+  <!-- Contact -->
+  <rect x="560" y="150" width="140" height="50" rx="8" fill="#EAF6E7" stroke="#2E7D32" stroke-width="2"/>
+  <text x="630" y="172" font-family="Arial, sans-serif" font-size="14" fill="#222222" text-anchor="middle">Contact</text>
+  <text x="630" y="188" font-family="Arial, sans-serif" font-size="11" fill="#555555" text-anchor="middle">contact.html</text>
+
+  <!-- Legend -->
+  <text x="400" y="260" font-family="Arial, sans-serif" font-size="13" fill="#555555" text-anchor="middle">All pages share the same header (logo + navigation menu) and footer.</text>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="13" fill="#555555" text-anchor="middle">Navigation links connect every page to every other page (not shown, to avoid clutter).</text>
+
+  <!-- Nav bar illustration -->
+  <rect x="130" y="320" width="540" height="40" rx="4" fill="#2E7D32"/>
+  <text x="400" y="345" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">Home | About Us | Our Programmes | Enquiry | Contact</text>
+  <text x="400" y="390" font-family="Arial, sans-serif" font-size="13" fill="#555555" text-anchor="middle">Global navigation menu (present in the header of every page)</text>
+</svg>

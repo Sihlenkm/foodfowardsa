@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | FoodForward SA</title>
+    <meta name="description" content="Get in touch with FoodForward SA's warehouses in Cape Town and Johannesburg.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">Food<span>Forward</span> SA</a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Our Programmes</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="page-banner">
+            <h1>Contact Us</h1>
+        </section>
+
+        <!-- Contact details for more than one location, as required by the brief -->
+        <section class="content-block two-col">
+            <div>
+                <h2>Cape Town Warehouse</h2>
+                <p>12 Marconi Road, Montague Gardens<br>Cape Town, 7441<br>Tel: 021 703 6360</p>
+            </div>
+            <div>
+                <h2>Johannesburg Warehouse</h2>
+                <p>8 Steel Road, Chloorkop<br>Johannesburg, 1619<br>Tel: 011 023 4567</p>
+            </div>
+        </section>
+
+        <!-- Map section: an embedded Google Map will be added here in Part 3 -->
+        <section class="content-block">
+            <h2>Find Us</h2>
+            <div class="map-placeholder">
+                <!-- Google Maps <iframe> embed will replace this placeholder in Part 3 -->
+                <p>[ Map embed showing both warehouse locations will be added in Part 3 ]</p>
+            </div>
+        </section>
+
+        <!-- General contact/message form -->
+        <section class="content-block">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="post" id="contact-form">
+
+                <div class="form-group">
+                    <label for="c-full-name">Full Name</label>
+                    <input type="text" id="c-full-name" name="full-name" required minlength="2">
+                </div>
+
+                <div class="form-group">
+                    <label for="c-email">Email Address</label>
+                    <input type="email" id="c-email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="c-phone">Phone Number</label>
+                    <input type="tel" id="c-phone" name="phone" pattern="[0-9]{10}" placeholder="0821234567">
+                </div>
+
+                <div class="form-group">
+                    <label for="message-type">Type of Message</label>
+                    <select id="message-type" name="message-type" required>
+                        <option value="">-- Please choose an option --</option>
+                        <option value="general">General Enquiry</option>
+                        <option value="media">Media / Press</option>
+                        <option value="partnership">Partnership Opportunity</option>
+                        <option value="complaint">Complaint / Feedback</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="c-message">Message</label>
+                    <textarea id="c-message" name="message" rows="5" minlength="10" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FoodForward SA (Student Project). All rights reserved.</p>
+        <p>Content adapted from publicly available FoodForward SA sources for academic purposes only.</p>
+    </footer>
+
+</body>
+</html>
