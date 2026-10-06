@@ -75,14 +75,28 @@
             </p>
         </section>
 
-        <!-- Team placeholder section -->
-        <section class="content-block">
-            <h2>Our Network</h2>
-            <p>
-                Our work is powered by a national network of warehouses, staff, and
-                thousands of volunteers who help collect, sort, and pack food for
-                distribution to our beneficiary organisations every day.
-            </p>
+        <!-- Network section: text on one side, volunteer photo on the other -->
+        <section class="content-block two-col">
+            <div>
+                <h2>Our Network</h2>
+                <p>
+                    Our work is powered by a national network of warehouses, staff, and
+                    thousands of volunteers who help collect, sort, and pack food for
+                    distribution to our beneficiary organisations every day.
+                </p>
+            </div>
+
+            <!-- picture element: small file is used on narrow screens, large file otherwise -->
+            <figure class="side-image">
+                <picture>
+                    <source media="(max-width: 600px)"
+                            srcset="images/volunteers-food-sorting-small.jpg">
+                    <img src="images/volunteers-food-sorting-large.jpg"
+                         alt="Volunteers in blue sweatshirts checking a clipboard beside boxes of fruit, vegetables and tinned food"
+                         width="800" height="1200">
+                </picture>
+                <figcaption>Photo: cottonbro studio via Pexels</figcaption>
+            </figure>
         </section>
 
     </main>
