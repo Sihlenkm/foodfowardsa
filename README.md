@@ -162,6 +162,10 @@ foodforwardsa/
 - **[6 October 2026]** — Added a hero image to `index.html` using `srcset` and `sizes`, and a volunteer photo to `about.html` using the `<picture>` element, with alt text and photo credits.
 - **[6 October 2026]** — Added image and caption styles (`object-fit`, `max-width`, `border-radius`) and smaller image heights for mobile.
 - **[6 October 2026]** — Added responsive testing screenshots to the `screenshots/` folder and a responsive section to the README.
+   - **[2 November 2026]** — Added meta keywords to all five pages and rewrote the title tags to include relevant keywords.
+   - **[2 November 2026]** — Replaced the contact page map placeholder with an interactive Leaflet map (js/map.js) showing the Cape Town and Johannesburg warehouses, with popups.
+   - **[2 November 2026]** — Added a JavaScript FAQ accordion (js/accordion.js) to services.html, with matching CSS.
+   - **[2 November 2026]** — Fixed the js folder structure (files were nested in a duplicate js folder) and removed a duplicated call-to-action section on services.html.
 
 ## References
 FoodForward SA (2026) *About us*. Available at:<
@@ -178,6 +182,10 @@ https://www.brac.net/global-impact/south-africa/ >[Accessed: 2 September
 cottonbro studio (2026) *Boxing foods for aid distribution*. Available at:< https://www.pexels.com/photo/boxing-foods-for-aid-distribution-6591166/> [Accessed: 6 October 2026].
 
 Fring, G. (2026) *A person packing donations*. Available at:< https://www.pexels.com/photo/7156158/> [Accessed: 6 October 2026].
+
+   Leaflet (2023) *Leaflet: an open-source JavaScript library for interactive maps*. Available at:<https://leafletjs.com/> [Accessed: 2 November 2026].
+
+   OpenStreetMap contributors (2026) *OpenStreetMap*. Available at: <https://www.openstreetmap.org/> [Accessed: 2 November 2026].
 
 
 
