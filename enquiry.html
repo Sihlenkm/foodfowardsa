@@ -37,48 +37,83 @@
                 food and corporate donors, and beneficiary organisation partners to
                 do our work. Fill in the form below to let us know how you would
                 like to get involved, and our team will follow up with details on
-                availability and next steps. (Note: full client-side validation and a
-                dynamic response will be added in Part 3 of this project.)
+                availability and next steps.
             </p>
         </section>
 
-        <!-- Enquiry form: purpose is to enquire about volunteering, donating, or partnership -->
-        <!-- action left as a placeholder until Part 3 JS handling is added -->
+                <!-- Enquiry form: js/enquiry.js checks every field and shows a response -->
         <section class="content-block">
-            <form action="#" method="post" id="enquiry-form">
+            <h2>Enquiry Form</h2>
+
+            <!-- novalidate switches off the browser's own pop-ups so our JavaScript messages are used -->
+            <form action="#" method="post" id="enquiry-form" novalidate>
 
                 <div class="form-group">
                     <label for="full-name">Full Name</label>
-                    <input type="text" id="full-name" name="full-name" required minlength="2">
+                    <input type="text" id="full-name" name="full-name" autocomplete="name">
+                    <span class="error-message" id="full-name-error"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" autocomplete="email">
+                    <span class="error-message" id="email-error"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="0821234567" required>
+                    <input type="tel" id="phone" name="phone" placeholder="0821234567" autocomplete="tel">
+                    <span class="error-message" id="phone-error"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="enquiry-type">I am interested in...</label>
-                    <select id="enquiry-type" name="enquiry-type" required>
+                    <select id="enquiry-type" name="enquiry-type">
                         <option value="">-- Please choose an option --</option>
                         <option value="volunteer">Becoming a Volunteer</option>
                         <option value="donor">Donating Food or Funds</option>
                         <option value="partner">Registering as a Beneficiary Organisation</option>
                     </select>
+                    <span class="error-message" id="enquiry-type-error"></span>
+                </div>
+
+                <!-- Radio buttons: only one warehouse can be chosen -->
+                <fieldset class="form-group" id="warehouse">
+                    <legend>Which warehouse is closest to you?</legend>
+                    <label class="radio-option">
+                        <input type="radio" name="warehouse" value="cape-town"> Cape Town (Montague Gardens)
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="warehouse" value="johannesburg"> Johannesburg (Chloorkop)
+                    </label>
+                    <span class="error-message" id="warehouse-error"></span>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="group-size">How many people does this enquiry cover? (1 to 50)</label>
+                    <input type="number" id="group-size" name="group-size" min="1" max="50" step="1" value="1">
+                    <span class="error-message" id="group-size-error"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="message">Tell us more</label>
-                    <textarea id="message" name="message" rows="5" minlength="10" required></textarea>
+                    <textarea id="message" name="message" rows="5" maxlength="500"></textarea>
+                    <span class="error-message" id="message-error"></span>
+                </div>
+
+                <!-- Checkbox: must be ticked before the form can be submitted -->
+                <div class="form-group">
+                    <label class="checkbox-option" for="consent">
+                        <input type="checkbox" id="consent" name="consent"> I agree that FoodForward SA may contact me about this enquiry.
+                    </label>
+                    <span class="error-message" id="consent-error"></span>
                 </div>
 
                 <button type="submit" class="btn-primary">Submit Enquiry</button>
             </form>
+
+            <!-- The personalised response is written into this box by JavaScript -->
+            <div id="enquiry-response" class="form-response" tabindex="-1" aria-live="polite" hidden></div>
         </section>
 
     </main>
@@ -88,5 +123,7 @@
         <p>Content adapted from publicly available FoodForward SA sources for academic purposes only.</p>
     </footer>
 
+      <script src="js/enquiry.js"></script> <!-- NEW -->
+      
 </body>
 </html>
