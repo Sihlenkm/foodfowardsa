@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Programmes | FoodForward SA</title>
+       <title>Our Programmes | How FoodForward SA Foodbanking Works</title> <!-- CHANGED -->
     <meta name="description" content="Explore FoodForward SA's foodbanking model, from recovering surplus food to distributing it to beneficiary organisations nationwide.">
+    <meta name="keywords" content="foodbanking programme, beneficiary organisations, surplus food recovery, food distribution, soup kitchens, South Africa"> <!-- NEW -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -65,10 +66,47 @@
             </p>
         </section>
 
+        <!-- NEW: FAQ accordion, js/accordion.js opens and closes the panels -->
+        <section class="content-block">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion">
+
+                <button class="accordion-header" id="faq-btn-1" aria-expanded="false" aria-controls="faq-1">
+                    What food do you recover?
+                </button>
+                <div class="accordion-panel" id="faq-1" role="region" aria-labelledby="faq-btn-1" hidden>
+                    <p>We recover edible, in-date surplus food and non-food groceries from farmers, manufacturers and retailers.</p>
+                </div>
+
+                <button class="accordion-header" id="faq-btn-2" aria-expanded="false" aria-controls="faq-2">
+                    How does an organisation become a beneficiary?
+                </button>
+                <div class="accordion-panel" id="faq-2" role="region" aria-labelledby="faq-btn-2" hidden>
+                    <p>Community organisations apply and are verified as registered non-profits. Use our enquiry form and choose "Registering as a Beneficiary Organisation".</p>
+                </div>
+
+                <button class="accordion-header" id="faq-btn-3" aria-expanded="false" aria-controls="faq-3">
+                    How can I volunteer?
+                </button>
+                <div class="accordion-panel" id="faq-3" role="region" aria-labelledby="faq-btn-3" hidden>
+                    <p>Volunteers help us collect, sort and pack food. Submit the enquiry form and choose "Becoming a Volunteer".</p>
+                </div>
+
+                <button class="accordion-header" id="faq-btn-4" aria-expanded="false" aria-controls="faq-4">
+                    How can I donate?
+                </button>
+                <div class="accordion-panel" id="faq-4" role="region" aria-labelledby="faq-btn-4" hidden>
+                    <p>Submit the enquiry form and choose "Donating Food or Funds" and our team will follow up.</p>
+                </div>
+
+            </div>
+        </section>
+
         <section class="cta">
             <h2>Interested in donating, volunteering, or partnering?</h2>
             <a href="enquiry.html" class="btn-secondary">Enquire Now</a>
         </section>
+
 
     </main>
 
@@ -76,6 +114,8 @@
         <p>&copy; 2026 FoodForward SA (Student Project). All rights reserved.</p>
         <p>Content adapted from publicly available FoodForward SA sources for academic purposes only.</p>
     </footer>
+
+     <script src="js/accordion.js"></script> <!-- NEW -->
 
 </body>
 </html>
