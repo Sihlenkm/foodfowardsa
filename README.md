@@ -33,6 +33,7 @@ The project is being developed in three parts:
 - Consistent header navigation and footer across every page.
 - Volunteer/donor/partner enquiry form (`enquiry.html`).
 - General contact form with multiple warehouse locations (`contact.html`).
+- (Part 3) Enquiry form (`enquiry.html`) for volunteers, donors and possible beneficiary organisations. It has text, email, phone, dropdown, radio button, number and checkbox controls. JavaScript (`js/enquiry.js`) checks every field and shows an error message under any invalid one. Once the form is valid, the page shows a personalised response based on the enquiry type, closest warehouse and group size.
 - (Part 2) Fully responsive desktop, tablet, and mobile layouts.
 - (Part 3) JavaScript form validation, interactive elements, embedded map,
   and SEO optimisation.
@@ -166,6 +167,10 @@ foodforwardsa/
    - **[2 November 2026]** — Replaced the contact page map placeholder with an interactive Leaflet map (js/map.js) showing the Cape Town and Johannesburg warehouses, with popups.
    - **[2 November 2026]** — Added a JavaScript FAQ accordion (js/accordion.js) to services.html, with matching CSS.
    - **[2 November 2026]** — Fixed the js folder structure (files were nested in a duplicate js folder) and removed a duplicated call-to-action section on services.html.
+   - **[2 November 2026]** — Rebuilt the enquiry form in enquiry.html with extra controls (radio buttons for closest warehouse, number input for group size, consent checkbox) and added novalidate so JavaScript handles validation.
+- **[2 November 2026]** — Added js/enquiry.js: validates name, email, phone (10 digits starting with 0), enquiry type, warehouse, group size (1 to 50), message length and consent, with an error message under each invalid field.
+- **[2 November 2026]** — Added a personalised response on the enquiry page based on enquiry type, warehouse and group size (volunteer, donor or beneficiary organisation).
+- **[2 November 2026]** — Added CSS for error messages, invalid field highlighting and the response box.
 
 ## References
 FoodForward SA (2026) *About us*. Available at:<
@@ -187,6 +192,8 @@ Fring, G. (2026) *A person packing donations*. Available at:< https://www.pexels
 
    OpenStreetMap contributors (2026) *OpenStreetMap*. Available at: <https://www.openstreetmap.org/> [Accessed: 2 November 2026].
 
+MDN Web Docs (2026) *Regular expressions*. Available at:< https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions> [Accessed: 2 November 2026].   
+
 
 
 ## AI Disclosure
@@ -207,12 +214,40 @@ In-text citation: (Anthropic, 2026)
 Reference: Anthropic (2026) Claude Sonnet 5.5 [Large language model]. Available at:< https://claude.ai> [Accessed: 6 October 2026].
 
 Purpose of use:
-Asked for step by step set up and gude on how to continue from part 1.
+Asked for step by step set up and guide on how to continue from part 1.
 Resizing Pexel images accordingly.
 
 Date of AI use:
 
 6 October 2026
+
+Chat evidence:
+
+Screenshots linked
+
+Disclosure of AI Usage in my Assessment (Part 3)
+
+Section(s) where AI was used:
+
+WEDE5020 PoE Part 3
+js/map.js, js/accordion.js, js/enquiry.js
+enquiry.html, contact.html, services.html (meta keywords, map, accordion, enquiry form)
+css/style.css (Part 3 additions)
+README.md (changelog entries)
+Troubleshooting file and folder structure and Git commit steps
+
+AI tool used:
+
+Claude (Sonnet 5.5), Anthropic, via claude.ai
+In-text citation: (Anthropic, 2026)
+Reference: Anthropic (2026) Claude Sonnet 5.5 [Large language model]. Available at:< https://claude.ai> [Accessed: 2 November 2026].
+
+Purpose of use:
+Step-by-step guidance and example code for the interactive map, FAQ accordion, enquiry form validation and response, and fixing a 404 error caused by a nested js folder. I typed the code myself, tested it in the browser, and edited it to suit my website.
+
+Date of AI use:
+
+2 November 2026
 
 Chat evidence:
 
