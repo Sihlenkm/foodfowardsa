@@ -65,7 +65,43 @@
                 healthcare, or empowerment programmes alongside feeding.
             </p>
         </section>
+        <!-- Programme directory: js/search.js builds the cards and handles search, filter and sort -->
+        <section class="content-block">
+            <h2>Programme Directory</h2>
+            <p>Search or filter to find out more about how FoodForward SA works.</p>
 
+            <div class="directory-controls">
+                <div class="form-group">
+                    <label for="search-box">Search</label>
+                    <input type="search" id="search-box" placeholder="e.g. volunteer, warehouse">
+                </div>
+
+                <div class="form-group">
+                    <label for="category-filter">Category</label>
+                    <select id="category-filter">
+                        <option value="all">All categories</option>
+                        <option value="Food recovery">Food recovery</option>
+                        <option value="Distribution">Distribution</option>
+                        <option value="Who we serve">Who we serve</option>
+                        <option value="Get involved">Get involved</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sort-order">Sort by</label>
+                    <select id="sort-order">
+                        <option value="az">Title A to Z</option>
+                        <option value="za">Title Z to A</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Tells the visitor how many results match. aria-live lets screen readers announce changes. -->
+            <p id="result-count" aria-live="polite"></p>
+
+            <!-- Empty on purpose: js/search.js fills this with cards -->
+            <div id="directory-results" class="directory-grid"></div>
+        </section>
         <!-- NEW: FAQ accordion, js/accordion.js opens and closes the panels -->
         <section class="content-block">
             <h2>Frequently Asked Questions</h2>
@@ -116,6 +152,8 @@
     </footer>
 
      <script src="js/accordion.js"></script> <!-- NEW -->
+    <script src="js/accordion.js"></script>
+    <script src="js/search.js"></script> <!-- NEW -->
 
 </body>
 </html>

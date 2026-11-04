@@ -190,6 +190,8 @@ foodforwardsa/
 - **[4 November 2026]** — Added four Pexels photos to images/ with descriptive file names, alt text and photo credits, and added their references to the README.
 - **[4 November 2026]** — Put the reference list in alphabetical order and standardised the Harvard formatting of every entry, adding 2021a and 2021b for two sources by the same author in the same year.
 - **[4 November 2026]** — Renamed the four gallery photos in images/ to descriptive, lowercase, hyphenated file name for SEO and consistency, and updated the matching src paths in about.html.
+- **[5 November 2026]** — Added a Programme Directory to services.html and js/search.js: the cards are built dynamically from a JavaScript array, with live keyword search, a category filter, A to Z / Z to A sorting, a result count and a no-results message.
+- **[5 November 2026]** — Added CSS for the directory controls and cards, including a single-column layout on mobile.
 
 ## References
 BRAC (2026) *South Africa*. Available at: https://www.brac.net/global-impact/south-africa/ [Accessed: 2 September 2026].

@@ -654,3 +654,63 @@ fieldset.form-group legend {
         height: 10rem;
     }
 }
+
+/* ---------- Part 3: Programme directory (search, filter, sort) ---------- */
+.directory-controls {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.directory-controls input,
+.directory-controls select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #2E7D32;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.directory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.directory-card {
+    padding: 1.25rem;
+    background-color: #ffffff;
+    border: 1px solid #2E7D32;
+    border-left: 6px solid #F2A93B;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.directory-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.directory-card h3 {
+    margin: 0.5rem 0;
+    color: #1B5E20;
+}
+
+.directory-tag {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    background-color: #EAF6E7;
+    color: #1B5E20;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .directory-controls {
+        grid-template-columns: 1fr;
+    }
+}
