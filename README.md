@@ -147,6 +147,10 @@ foodforwardsa/
 - Tested in Chrome DevTools device mode at desktop (1366px), tablet (820px) and mobile (390px) widths.
 - No horizontal scrolling at any tested width.
 
+## Part 3 Details
+### Feedback from Part 2
+- At the time of submitting Part 2 I had submitted late and thus didn't get any marks for the Part 2 I submitted, meaning I also didn't get feedback.
+
 ## Changelog
 - **[31 August 2026]** — Initial repository setup: file/folder creation
   (css, js, images, docs).
@@ -180,6 +184,7 @@ foodforwardsa/
 - **[2 November 2026]** — Added CSS for the email preview box.
    - **[4 November 2026]** — Added robots.txt and sitemap.xml to the project root to help search engines crawl the site, and linked the sitemap inside robots.txt.
    - **[4 November 2026]** — Deployed the website to Netlify and tested the pages, navigation, map, accordion and both forms on the live URL.
+- **[4 November 2026]** — Part 2 feedback: no feedback had been released at the time of submission, due to my Part 2 not being marked due to a late submission.
 
 ## References
 FoodForward SA (2026) *About us*. Available at:<
