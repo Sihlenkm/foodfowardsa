@@ -99,13 +99,54 @@
                 <figcaption>Photo: cottonbro studio via Pexels</figcaption>
             </figure>
         </section>
+        <!-- Gallery: clicking a photo opens it in the lightbox (js/lightbox.js) -->
+        <section class="content-block">
+            <h2>Gallery</h2>
+            <p>Click on a photo to view it larger.</p>
 
+            <div class="gallery">
+
+                <button type="button" class="gallery-item" data-caption="Photo: PHOTOGRAPHER NAME via Pexels">
+                    <img src="images/gallery-food-donation-boxes.jpg"
+                         alt="Cardboard boxes of donated food stacked on a table"
+                         width="400" height="300" loading="lazy">
+                </button>
+
+                <button type="button" class="gallery-item" data-caption="Photo: PHOTOGRAPHER NAME via Pexels">
+                    <img src="images/gallery-volunteers-packing.jpg"
+                         alt="Volunteers packing groceries into boxes"
+                         width="400" height="300" loading="lazy">
+                </button>
+
+                <button type="button" class="gallery-item" data-caption="Photo: PHOTOGRAPHER NAME via Pexels">
+                    <img src="images/gallery-fresh-produce-crates.jpg"
+                         alt="Crates of fresh vegetables ready for distribution"
+                         width="400" height="300" loading="lazy">
+                </button>
+
+                <button type="button" class="gallery-item" data-caption="Photo: PHOTOGRAPHER NAME via Pexels">
+                    <img src="images/gallery-community-meal.jpg"
+                         alt="People sharing a community meal"
+                         width="400" height="300" loading="lazy">
+                </button>
+
+            </div>
+
+            <!-- The lightbox pop-up. It stays hidden until JavaScript opens it. -->
+            <dialog id="lightbox" aria-label="Image viewer">
+                <button type="button" id="lightbox-close" aria-label="Close image">&times;</button>
+                <button type="button" id="lightbox-prev" aria-label="Previous image">&#10094;</button>
+                <button type="button" id="lightbox-next" aria-label="Next image">&#10095;</button>
+                <img id="lightbox-img" src="" alt="">
+                <p id="lightbox-caption"></p>
+            </dialog>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2026 FoodForward SA (Student Project). All rights reserved.</p>
         <p>Content adapted from publicly available FoodForward SA sources for academic purposes only.</p>
     </footer>
-
+    <script src="js/lightbox.js"></script> <!-- NEW -->
 </body>
 </html>
