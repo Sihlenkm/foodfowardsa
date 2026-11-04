@@ -21,6 +21,9 @@ The project is being developed in three parts:
 - **Part 2:** CSS styling and responsive design (current stage).
 - **Part 3:** JavaScript functionality, SEO, forms, and deployment.
 
+   ## Live Website
+   The website is deployed on Netlify and can be viewed here: https://foodfowardsa-sihlengiwembhele.netlify.app
+
 ## Website Goals and Objectives
 - Increase awareness of food waste and food insecurity in South Africa.
 - Encourage food, corporate, and individual donations.
@@ -175,6 +178,8 @@ foodforwardsa/
 - **[2 November 2026]** — Added js/contact.js: validates name, email, optional phone (10 digits starting with 0), message type and message length (10 to 500 characters), showing an error under each invalid field.
 - **[2 November 2026]** — Added email compilation to js/contact.js: once valid, the details are built into a mailto link addressed to the recipient set in the code, shown as a preview, and opened in the visitor's email app.
 - **[2 November 2026]** — Added CSS for the email preview box.
+   - **[4 November 2026]** — Added robots.txt and sitemap.xml to the project root to help search engines crawl the site, and linked the sitemap inside robots.txt.
+   - **[4 November 2026]** — Deployed the website to Netlify and tested the pages, navigation, map, accordion and both forms on the live URL.
 
 ## References
 FoodForward SA (2026) *About us*. Available at:<
