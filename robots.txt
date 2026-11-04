@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://foodfowardsa-sihlengiwembhele.netlify.app/sitemap.xml

@@ -171,6 +171,10 @@ foodforwardsa/
 - **[2 November 2026]** — Added js/enquiry.js: validates name, email, phone (10 digits starting with 0), enquiry type, warehouse, group size (1 to 50), message length and consent, with an error message under each invalid field.
 - **[2 November 2026]** — Added a personalised response on the enquiry page based on enquiry type, warehouse and group size (volunteer, donor or beneficiary organisation).
 - **[2 November 2026]** — Added CSS for error messages, invalid field highlighting and the response box.
+- **[2 November 2026]** — Rebuilt the contact form in contact.html with novalidate and error message spans, and changed the message-type option values so they can be used directly in the email.
+- **[2 November 2026]** — Added js/contact.js: validates name, email, optional phone (10 digits starting with 0), message type and message length (10 to 500 characters), showing an error under each invalid field.
+- **[2 November 2026]** — Added email compilation to js/contact.js: once valid, the details are built into a mailto link addressed to the recipient set in the code, shown as a preview, and opened in the visitor's email app.
+- **[2 November 2026]** — Added CSS for the email preview box.
 
 ## References
 FoodForward SA (2026) *About us*. Available at:<
