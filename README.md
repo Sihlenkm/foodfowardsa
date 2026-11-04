@@ -18,8 +18,8 @@ provinces &mdash; a model known as foodbanking.
 
 The project is being developed in three parts:
 - **Part 1:** Planning, research, and static HTML structure (complete).
-- **Part 2:** CSS styling and responsive design (current stage).
-- **Part 3:** JavaScript functionality, SEO, forms, and deployment.
+- **Part 2:** CSS styling and responsive design (complete).
+- **Part 3:** JavaScript functionality, SEO, forms, and deployment(current stage).
 
    ## Live Website
    The website is deployed on Netlify and can be viewed here: https://foodfowardsa-sihlengiwembhele.netlify.app
@@ -45,8 +45,8 @@ The project is being developed in three parts:
 | Part | Focus | Status |
 |------|-------|--------|
 | Part 1 | Planning, proposal, HTML structure | Complete |
-| Part 2 | CSS styling, responsive design | In progress |
-| Part 3 | JavaScript, SEO, forms, deployment | Not started |
+   | Part 2 | CSS styling, responsive design | Complete |
+   | Part 3 | JavaScript, SEO, forms, deployment | In progress |
 
 ## Sitemap
 See `docs/sitemap.svg` / `docs/sitemap.png` for the full visual sitemap.
