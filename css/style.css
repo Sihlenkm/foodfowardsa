@@ -542,3 +542,16 @@ fieldset.form-group legend {
     margin-top: 1rem;
     padding-left: 1.25rem;
 }
+
+/* ---------- Part 3: Contact form email preview ---------- */
+.email-preview {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #2E7D32;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: Consolas, monospace;
+    font-size: 0.9rem;
+}

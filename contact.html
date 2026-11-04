@@ -49,45 +49,54 @@
             <h2>Find Us</h2>
             <div id="map" role="region" aria-label="Map showing the Cape Town and Johannesburg warehouses"></div>
         </section>
-
-        <!-- General contact/message form -->
+        <!-- General contact form: js/contact.js checks the fields and builds an email -->
         <section class="content-block">
             <h2>Send Us a Message</h2>
-            <form action="#" method="post" id="contact-form">
+
+            <!-- novalidate lets our JavaScript show the error messages instead of the browser -->
+            <form action="#" method="post" id="contact-form" novalidate>
 
                 <div class="form-group">
                     <label for="c-full-name">Full Name</label>
-                    <input type="text" id="c-full-name" name="full-name" required minlength="2">
+                    <input type="text" id="c-full-name" name="full-name" autocomplete="name">
+                    <span class="error-message" id="c-full-name-error"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="c-email">Email Address</label>
-                    <input type="email" id="c-email" name="email" required>
+                    <input type="email" id="c-email" name="email" autocomplete="email">
+                    <span class="error-message" id="c-email-error"></span>
                 </div>
 
                 <div class="form-group">
-                    <label for="c-phone">Phone Number</label>
-                    <input type="tel" id="c-phone" name="phone" pattern="[0-9]{10}" placeholder="0821234567">
+                    <label for="c-phone">Phone Number (optional)</label>
+                    <input type="tel" id="c-phone" name="phone" placeholder="0821234567" autocomplete="tel">
+                    <span class="error-message" id="c-phone-error"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="message-type">Type of Message</label>
-                    <select id="message-type" name="message-type" required>
+                    <select id="message-type" name="message-type">
                         <option value="">-- Please choose an option --</option>
-                        <option value="general">General Enquiry</option>
-                        <option value="media">Media / Press</option>
-                        <option value="partnership">Partnership Opportunity</option>
-                        <option value="complaint">Complaint / Feedback</option>
+                        <option value="General Enquiry">General Enquiry</option>
+                        <option value="Media / Press">Media / Press</option>
+                        <option value="Partnership Opportunity">Partnership Opportunity</option>
+                        <option value="Complaint / Feedback">Complaint / Feedback</option>
                     </select>
+                    <span class="error-message" id="message-type-error"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="c-message">Message</label>
-                    <textarea id="c-message" name="message" rows="5" minlength="10" required></textarea>
+                    <textarea id="c-message" name="message" rows="5" maxlength="500"></textarea>
+                    <span class="error-message" id="c-message-error"></span>
                 </div>
 
                 <button type="submit" class="btn-primary">Send Message</button>
             </form>
+
+            <!-- JavaScript fills this box with the email preview and a send link -->
+            <div id="contact-response" class="form-response" tabindex="-1" aria-live="polite" hidden></div>
         </section>
 
     </main>
@@ -99,5 +108,10 @@
 
      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> <!-- NEW -->
     <script src="js/map.js"></script> <!-- NEW -->
+
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/contact.js"></script> <!-- NEW -->
+
 </body>
 </html>
