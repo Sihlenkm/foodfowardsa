@@ -185,28 +185,34 @@ foodforwardsa/
    - **[4 November 2026]** — Added robots.txt and sitemap.xml to the project root to help search engines crawl the site, and linked the sitemap inside robots.txt.
    - **[4 November 2026]** — Deployed the website to Netlify and tested the pages, navigation, map, accordion and both forms on the live URL.
 - **[4 November 2026]** — Part 2 feedback: no feedback had been released at the time of submission, due to my Part 2 not being marked due to a late submission.
+- **[4 November 2026]** — Added four optimised, descriptively named photos to images/ with alt text and photo credits.
+- **[4 November 2026]** — Added a gallery section to about.html and js/lightbox.js, which opens a photo in a larger pop-up (native dialog element) with next, previous, close, keyboard and click-outside controls, plus matching CSS.
+- **[4 November 2026]** — Added four Pexels photos to images/ with descriptive file names, alt text and photo credits, and added their references to the README.
 
 ## References
-FoodForward SA (2026) *About us*. Available at:<
-https://www.foodforwardsa.org/about-us/> [Accessed: 2 September 2026].
+BRAC (2026) *South Africa*. Available at: https://www.brac.net/global-impact/south-africa/ [Accessed: 2 September 2026].
 
-BRAC International (2026) *Vision, mission, and values*. Available at:<
-https://www.bracinternational.org/about-us/vision-mission-values/>
-[Accessed: 2 September 2026].
+BRAC International (2026) *Vision, mission, and values*. Available at: https://www.bracinternational.org/about-us/vision-mission-values/ [Accessed: 2 September 2026].
 
-BRAC (2026) *South Africa*. Available at:<
-https://www.brac.net/global-impact/south-africa/ >[Accessed: 2 September
-2026].
+Cameron, J.M. (2021a) *A close up shot of canned goods* [Photograph]. Available at: https://www.pexels.com/photo/a-close-up-shot-of-canned-goods-6994944/ [Accessed: 4 November 2026].
 
-cottonbro studio (2026) *Boxing foods for aid distribution*. Available at:< https://www.pexels.com/photo/boxing-foods-for-aid-distribution-6591166/> [Accessed: 6 October 2026].
+Cameron, J.M. (2021b) *People sorting donations* [Photograph]. Available at: https://www.pexels.com/photo/people-sorting-donations-6994963/ [Accessed: 4 November 2026].
 
-Fring, G. (2026) *A person packing donations*. Available at:< https://www.pexels.com/photo/7156158/> [Accessed: 6 October 2026].
+cottonbro studio (2026) *Boxing foods for aid distribution* [Photograph]. Available at: https://www.pexels.com/photo/boxing-foods-for-aid-distribution-6591166/ [Accessed: 6 October 2026].
 
-   Leaflet (2023) *Leaflet: an open-source JavaScript library for interactive maps*. Available at:<https://leafletjs.com/> [Accessed: 2 November 2026].
+FoodForward SA (2026) *About us*. Available at: https://www.foodforwardsa.org/about-us/ [Accessed: 2 September 2026].
 
-   OpenStreetMap contributors (2026) *OpenStreetMap*. Available at: <https://www.openstreetmap.org/> [Accessed: 2 November 2026].
+Fring, G. (2026) *A person packing donations* [Photograph]. Available at: https://www.pexels.com/photo/7156158/ [Accessed: 6 October 2026].
 
-MDN Web Docs (2026) *Regular expressions*. Available at:< https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions> [Accessed: 2 November 2026].   
+Leaflet (2023) *Leaflet: an open-source JavaScript library for interactive maps*. Available at: https://leafletjs.com/ [Accessed: 2 November 2026].
+
+MDN Web Docs (2026) *Regular expressions*. Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions [Accessed: 2 November 2026].
+
+OpenStreetMap contributors (2026) *OpenStreetMap*. Available at: https://www.openstreetmap.org/ [Accessed: 2 November 2026].
+
+Xəlfəquliyev, T. (2025) *Fresh organic vegetables harvest in wooden crate* [Photograph]. Available at: https://www.pexels.com/photo/fresh-organic-vegetables-harvest-in-wooden-crate-33438410/ [Accessed: 4 November 2026].
+
+Xəlfəquliyev, T. (2026) *Community gathering with traditional food serving* [Photograph]. Available at: https://www.pexels.com/photo/community-gathering-with-traditional-food-serving-39278986/ [Accessed: 4 November 2026].
 
 
 
