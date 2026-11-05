@@ -1,17 +1,17 @@
-/* =========================================================
-   FoodForward SA - style.css (Part 2: full desktop + responsive)
+/*
+   FoodForward SA - style.css (Part 2)
    Structure:
-   1. CSS reset
-   2. Design tokens (colours, type scale, spacing)
-   3. Base and typography
-   4. Layout (header, main, footer)
-   5. Components (hero, cards, buttons, forms, etc.)
-   6. Pseudo-classes (hover, focus, active)
-   7. Responsive design (tablet and mobile media queries)
-   ========================================================= */
+   - CSS reset
+   - Design tokens 
+   - Base and typography
+   - Layout 
+   - Components 
+   - Pseudo-classes 
+   - Responsive design 
+   */
 
-/* ---------- 1. CSS RESET ---------- */
-/* Removes inconsistent browser defaults so every browser starts equal */
+/*  1. CSS RESET  */
+/* Removes inconsistent browser defaults*/
 *,
 *::before,
 *::after {
@@ -21,7 +21,7 @@
 }
 
 html {
-    font-size: 100%;          /* keeps 1rem = browser default (16px) */
+    font-size: 100%;         
     scroll-behavior: smooth;
 }
 
@@ -31,7 +31,7 @@ img {
     display: block;
 }
 
-/* ---------- 2. DESIGN TOKENS ---------- */
+/*  2. DESIGN TOKENS  */
 :root {
     --green-dark:   #1B5E20;
     --green:        #2E7D32;
@@ -46,7 +46,7 @@ img {
     --font-heading: 'Georgia', 'Times New Roman', serif;
     --font-body:    'Segoe UI', Arial, sans-serif;
 
-    /* Typography scale (ratio of about 1.25) */
+    /* Typography scale */
     --text-sm:  0.875rem;
     --text-md:  1rem;
     --text-lg:  1.25rem;
@@ -58,7 +58,7 @@ img {
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
-/* ---------- 3. BASE AND TYPOGRAPHY ---------- */
+/* 3. BASE AND TYPOGRAPHY */
 body {
     font-family: var(--font-body);
     font-size: var(--text-md);
@@ -86,8 +86,8 @@ a {
     font-weight: 600;
 }
 
-/* ---------- 4. LAYOUT ---------- */
-/* Header: Flexbox puts logo left, navigation right */
+/*  4. LAYOUT */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -146,7 +146,7 @@ main {
     margin-bottom: 2.5rem;
 }
 
-/* Two-column layout (mission/vision, locations) using Grid */
+/* Two-column layout using Grid */
 .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -163,7 +163,7 @@ footer {
 
 footer p { margin-bottom: 0.25rem; }
 
-/* ---------- 5. COMPONENTS ---------- */
+/* 5. COMPONENTS */
 /* Hero */
 .hero {
     background: linear-gradient(135deg, var(--green-light) 0%, #CFE9CB 100%);
@@ -184,7 +184,7 @@ footer p { margin-bottom: 0.25rem; }
 
 .intro { margin-bottom: 2.5rem; }
 
-/* Page banner on inner pages */
+/* Inner pages page banner*/
 .page-banner {
     background-color: var(--green);
     color: var(--white);
@@ -197,7 +197,7 @@ footer p { margin-bottom: 0.25rem; }
 
 .page-banner h1 { color: var(--white); }
 
-/* Impact cards: Flexbox row */
+/* Impact cards*/
 .highlights { margin-bottom: 2.5rem; }
 
 .highlight-cards {
@@ -302,7 +302,7 @@ figcaption {
 .hero-image img {
     width: 100%;
     max-height: 22rem;
-    object-fit: cover;        /* crops neatly instead of stretching */
+    object-fit: cover;        /* neat cropping no stretching */
     border-radius: var(--radius);
     box-shadow: var(--shadow);
 }
@@ -315,7 +315,7 @@ figcaption {
     box-shadow: var(--shadow);
 }
 
-/* ---------- 6. PSEUDO-CLASSES ---------- */
+/*  6. PSEUDO-CLASSES*/
 /* Links */
 a:hover { color: var(--green-dark); text-decoration: underline; }
 
@@ -328,7 +328,7 @@ a:hover { color: var(--green-dark); text-decoration: underline; }
 .logo a:hover,
 .logo a:focus { color: var(--orange); text-decoration: none; }
 
-/* Visible keyboard focus for accessibility */
+/* Visible keyboard focus */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -366,18 +366,18 @@ textarea:focus-visible {
 .form-group select:active,
 .form-group textarea:active { border-color: var(--green-dark); }
 
-/* Valid/invalid feedback after the user has typed something */
+/* Valid/invalid feedback after the user types something */
 .form-group input:user-valid,
 .form-group textarea:user-valid { border-color: var(--green); }
 .form-group input:user-invalid,
 .form-group select:user-invalid,
 .form-group textarea:user-invalid { border-color: #C62828; }
 
-/* First and last child tweaks */
+/* child tweaks */
 .steps-list li:last-child { margin-bottom: 0; }
 
-/* ---------- 7. RESPONSIVE DESIGN ---------- */
-/* TABLET: 1024px and below */
+/*  7. RESPONSIVE DESIGN  */
+/* Tablet: 1024px and below */
 @media (max-width: 1024px) {
     h1 { font-size: var(--text-2xl); }
 
@@ -389,14 +389,14 @@ textarea:focus-visible {
     .card { flex: 1 1 40%; }
 }
 
-/* MOBILE: 600px and below */
+/* Mobile: 600px and below */
 @media (max-width: 600px) {
-    html { font-size: 93.75%; }   /* slightly smaller base text (15px) */
+    html { font-size: 93.75%; }   /* smaller base text (15px) */
 
     h1 { font-size: var(--text-xl); }
     h2 { font-size: var(--text-lg); }
 
-    /* Header and navigation stack vertically */
+    /* Vertical header and navigation stack */
     header {
         flex-direction: column;
         align-items: stretch;
@@ -414,7 +414,7 @@ textarea:focus-visible {
 
     main { padding: 1rem; }
 
-    /* Multi-column layouts become a single column */
+    /* Multi-column layouts into single column */
     .two-col { grid-template-columns: 1fr; gap: 1rem; }
 
     .highlight-cards { flex-direction: column; }
@@ -432,13 +432,13 @@ textarea:focus-visible {
     .btn-secondary { display: block; text-align: center; }
 }
 
-/* Respect users who prefer less motion */
+/* Respect users who want less motion */
 @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; scroll-behavior: auto !important; }
 }
 
 
-/* ---------- Part 3: Leaflet map ---------- */
+/* Part 3: Leaflet map */
 #map {
     height: 400px;
     width: 100%;
@@ -452,7 +452,7 @@ textarea:focus-visible {
     }
 }
 
-/* ---------- Part 3: Accordion ---------- */
+/* Part 3: Accordion  */
 .accordion-header {
     display: block;
     width: 100%;
@@ -485,7 +485,7 @@ textarea:focus-visible {
     to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ---------- Part 3: Enquiry form validation and response ---------- */
+/*  Part 3: Enquiry form validation and response  */
 .error-message {
     display: block;
     min-height: 1.25rem;
@@ -543,7 +543,7 @@ fieldset.form-group legend {
     padding-left: 1.25rem;
 }
 
-/* ---------- Part 3: Contact form email preview ---------- */
+/* Part 3: Contact form email preview  */
 .email-preview {
     margin: 1rem 0;
     padding: 1rem;
@@ -556,7 +556,7 @@ fieldset.form-group legend {
     font-size: 0.9rem;
 }
 
-/* ---------- Part 3: Gallery and lightbox ---------- */
+/* Part 3: Gallery and lightbox  */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));

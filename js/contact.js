@@ -1,13 +1,13 @@
 // js/contact.js
-// Validates the contact form, then builds an email the visitor can send.
+// Validates the contact form, then builds email the visitor can send.
 
 // The address that receives the email. Change this to your own address.
-const RECIPIENT = "st10523711@myemeris.edu.za";
+const RECIPIENT = "sihlengiwenm@gmail,com";
 
 const contactForm = document.getElementById("contact-form");
 const contactResponse = document.getElementById("contact-response");
 
-// ---------- Error helpers ----------
+// Error helpers 
 
 function showContactError(id, message) {
   const span = document.getElementById(id + "-error");
@@ -22,7 +22,7 @@ function clearContactErrors() {
   });
 }
 
-// Clear a field's error as soon as the visitor edits it
+// Clear a field's error as soon as visitor edits it
 function clearContactGroup(event) {
   const group = event.target.closest(".form-group");
   if (group) {
@@ -33,13 +33,13 @@ function clearContactGroup(event) {
 contactForm.addEventListener("input", clearContactGroup);
 contactForm.addEventListener("change", clearContactGroup);
 
-// ---------- Validation ----------
+// Validation 
 
 function validateContactForm() {
   clearContactErrors();
   let isValid = true;
 
-  // Name: letters, spaces, hyphens and apostrophes, at least 2 characters
+  // Name
   const name = document.getElementById("c-full-name").value.trim();
   if (name.length < 2) {
     showContactError("c-full-name", "Please enter your full name (at least 2 characters).");
@@ -49,7 +49,7 @@ function validateContactForm() {
     isValid = false;
   }
 
-  // Email: something@something.something
+  // Email
   const email = document.getElementById("c-email").value.trim();
   if (email === "") {
     showContactError("c-email", "Please enter your email address.");
@@ -59,20 +59,20 @@ function validateContactForm() {
     isValid = false;
   }
 
-  // Phone is optional, but if it is filled in it must be 10 digits starting with 0
+  // Phone is optional
   const phone = document.getElementById("c-phone").value.replace(/\s/g, "");
   if (phone !== "" && !/^0\d{9}$/.test(phone)) {
     showContactError("c-phone", "Enter a 10-digit number starting with 0, or leave this blank.");
     isValid = false;
   }
 
-  // Message type must be chosen
+  // Choosing message type
   if (document.getElementById("message-type").value === "") {
     showContactError("message-type", "Please choose the type of message.");
     isValid = false;
   }
 
-  // Message: 10 to 500 characters
+  // Message
   const message = document.getElementById("c-message").value.trim();
   if (message.length < 10) {
     showContactError("c-message", "Please write a message of at least 10 characters.");
@@ -85,7 +85,7 @@ function validateContactForm() {
   return isValid;
 }
 
-// ---------- Building the email ----------
+// Building the email 
 
 function buildEmail(data) {
   const subject = data.type + " from " + data.name;
@@ -98,7 +98,7 @@ function buildEmail(data) {
     "Message type: " + data.type + "\r\n\r\n" +
     data.message;
 
-  // encodeURIComponent makes spaces and symbols safe to put in a link
+  // encodeURIComponent makes spaces and symbols safe to be put in a link
   const link = "mailto:" + RECIPIENT +
     "?subject=" + encodeURIComponent(subject) +
     "&body=" + encodeURIComponent(body);
@@ -106,7 +106,7 @@ function buildEmail(data) {
   return { subject: subject, body: body, link: link };
 }
 
-// ---------- Showing the result ----------
+//  Showing the result 
 
 function showContactResponse(email) {
   contactResponse.innerHTML = "";
@@ -119,13 +119,13 @@ function showContactResponse(email) {
     RECIPIENT + ". Press Send in your email app to deliver it. " +
     "If nothing opened, use the button below.";
 
-  // Preview of exactly what will be emailed
+  // Preview of what will be emailed
   const preview = document.createElement("pre");
   preview.className = "email-preview";
   preview.textContent = "To: " + RECIPIENT + "\nSubject: " + email.subject + "\n\n" +
     email.body.replace(/\r\n/g, "\n");
 
-  // Fallback link in case the email app did not open on its own
+  // Backup link in case the email app didn't open on its own
   const sendLink = document.createElement("a");
   sendLink.href = email.link;
   sendLink.className = "btn-primary";
@@ -137,10 +137,10 @@ function showContactResponse(email) {
   contactResponse.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
-// ---------- Submit ----------
+// Submit 
 
 contactForm.addEventListener("submit", function (event) {
-  // Stop the page from reloading
+  // Stop page from reloading
   event.preventDefault();
 
   if (!validateContactForm()) {
@@ -152,7 +152,7 @@ contactForm.addEventListener("submit", function (event) {
     return;
   }
 
-  // Collect the valid answers
+  // Collect valid answers
   const data = {
     name: document.getElementById("c-full-name").value.trim(),
     email: document.getElementById("c-email").value.trim(),
@@ -164,7 +164,7 @@ contactForm.addEventListener("submit", function (event) {
   const email = buildEmail(data);
   showContactResponse(email);
 
-  // Open the visitor's email app with the message filled in
+  // Open the visitor's email app with message filled in
   window.location.href = email.link;
 
   contactForm.reset();

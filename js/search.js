@@ -1,7 +1,7 @@
 // js/search.js
 // Builds the programme cards from data, then searches, filters and sorts them.
 
-// The content for the cards. Each object is one card.
+// Card content. Each object is one card.
 const programmes = [
   { title: "Surplus food recovery", category: "Food recovery",
     description: "Edible, in-date surplus food is collected from farmers, manufacturers and retailers before it goes to waste." },
@@ -25,7 +25,7 @@ const programmes = [
     description: "Apply for your non-profit organisation to join our network.", link: "enquiry.html" }
 ];
 
-// Find the page elements we need
+// Find the page elements needed
 const searchBox = document.getElementById("search-box");
 const categoryFilter = document.getElementById("category-filter");
 const sortOrder = document.getElementById("sort-order");
@@ -37,14 +37,14 @@ function renderCards() {
   const term = searchBox.value.trim().toLowerCase();
   const category = categoryFilter.value;
 
-  // 1. Filter: keep cards that match the category AND contain the search text
+  // Filter cards
   const matches = programmes.filter(function (item) {
     const inCategory = category === "all" || item.category === category;
     const text = (item.title + " " + item.description + " " + item.category).toLowerCase();
     return inCategory && text.includes(term);
   });
 
-  // 2. Sort the matches by title
+  // Sort matches by titles
   matches.sort(function (a, b) {
     if (sortOrder.value === "az") {
       return a.title.localeCompare(b.title);
@@ -52,7 +52,7 @@ function renderCards() {
     return b.title.localeCompare(a.title);
   });
 
-  // 3. Clear the old cards, then build the new ones
+  // Clear old cards and build new ones
   resultsBox.innerHTML = "";
 
   matches.forEach(function (item) {
@@ -71,7 +71,7 @@ function renderCards() {
 
     card.append(tag, heading, text);
 
-    // Only some cards have a link to the enquiry page
+    // Only some cards have a link to enquiry page
     if (item.link) {
       const link = document.createElement("a");
       link.href = item.link;
@@ -82,7 +82,7 @@ function renderCards() {
     resultsBox.appendChild(card);
   });
 
-  // 4. Update the result count, or explain when nothing matches
+  //Update the result count or explain when nothing matches
   if (matches.length === 0) {
     resultCount.textContent = "No programmes match your search. Try a different word or category.";
   } else if (matches.length === 1) {
@@ -97,5 +97,5 @@ searchBox.addEventListener("input", renderCards);
 categoryFilter.addEventListener("change", renderCards);
 sortOrder.addEventListener("change", renderCards);
 
-// Load all the cards when the page first opens
+// Load all the cards when the page opens
 renderCards();

@@ -25,17 +25,16 @@ The project is being developed in three parts:
    The website is deployed on Netlify and can be viewed here: https://foodfowardsa-sihlengiwembhele.netlify.app
 
 ## Website Goals and Objectives
-- Increase awareness of food waste and food insecurity in South Africa.
-- Encourage food, corporate, and individual donations.
+- Increase food waste and food insecurity awareness in South Africa.
+- Encourage donations in all forms but mostly food.
 - Grow the volunteer base and beneficiary organisation network.
-- Provide a simple enquiry channel for volunteers, donors, and prospective
-  partner organisations.
+- Provide an enquiry channel for volunteers, donors, and organisations.
 
 ## Key Features and Functionality
 - Five core pages: Home, About Us, Our Programmes, Enquiry, Contact.
 - Consistent header navigation and footer across every page.
 - Volunteer/donor/partner enquiry form (`enquiry.html`).
-- General contact form with multiple warehouse locations (`contact.html`).
+- General contact form with warehouse locations (`contact.html`).
 - (Part 3) Enquiry form (`enquiry.html`) for volunteers, donors and possible beneficiary organisations. It has text, email, phone, dropdown, radio button, number and checkbox controls. JavaScript (`js/enquiry.js`) checks every field and shows an error message under any invalid one. Once the form is valid, the page shows a personalised response based on the enquiry type, closest warehouse and group size.
 - (Part 2) Fully responsive desktop, tablet, and mobile layouts.
 - (Part 3) JavaScript form validation, interactive elements, embedded map,
@@ -45,8 +44,8 @@ The project is being developed in three parts:
 | Part | Focus | Status |
 |------|-------|--------|
 | Part 1 | Planning, proposal, HTML structure | Complete |
-   | Part 2 | CSS styling, responsive design | Complete |
-   | Part 3 | JavaScript, SEO, forms, deployment | Complete |
+| Part 2 | CSS styling, responsive design | Complete |
+| Part 3 | JavaScript, SEO, forms, deployment | Complete |
 
 ## Sitemap
 See `docs/sitemap.svg` / `docs/sitemap.png` for the full visual sitemap.
@@ -98,17 +97,16 @@ foodforwardsa/
 ### External stylesheet
 - One external stylesheet `css/style.css` is linked in the `<head>` of all five pages.
 - A CSS reset removes browser default margins/padding and sets `box-sizing: border-box`.
-- Design tokens (colours, font scale, radius, shadow) are stored as CSS custom properties in `:root`, so the look can be changed in one place.
+- Design tokens are stored as CSS custom properties in `:root`, so the look can be changed in one place.
 
 ### Typography
 - Headings use Georgia (serif) and body text uses Segoe UI (sans-serif).
-- A type scale (0.875rem to 2.441rem) gives consistent heading sizes.
 - `line-height`, `font-weight` and `letter-spacing` are for easier readability.
 
 ### Layout
-- **Flexbox:** header and navigation, and the impact cards.
+- **Flexbox:** header, navigation,impact cards.
 - **CSS Grid:** the two-column mission/vision and warehouse location sections.
-- Content is centred in `main`.
+- Content is in `main`.
 
 ### Decoration and colour
 - Palette: dark green `#1B5E20`, green `#2E7D32`, light green `#EAF6E7`, orange accent `#F2A93B`.
@@ -128,10 +126,9 @@ foodforwardsa/
 
 - Relative units (`rem`, `em`, `%`) are used for font sizes and spacing.
 - Images use `max-width: 100%; height: auto;` so they scale inside their containers.
-- `prefers-reduced-motion` is respected for users who don't want animations.
 
 ### Images
-- Two free-to-use stock photos from Pexels (see References) were resized to small and large versions to reduce loading time.
+- Eight free-to-use stock photos from Pexels
 - `index.html` hero image uses `srcset` and `sizes` so the browser loads the 600px or 1200px file depending on screen size.
 - `about.html` uses the `<picture>` element: the small file is served on screens of 600px or less, and the large file on bigger screens.
 - Images use `max-width: 100%`, `object-fit: cover` and descriptive `alt` text.
@@ -145,7 +142,6 @@ foodforwardsa/
 
 ### Testing
 - Tested in Chrome DevTools device mode at desktop (1366px), tablet (820px) and mobile (390px) widths.
-- No horizontal scrolling at any tested width.
 
 ## Part 3 Details
 ### Feedback from Part 2
@@ -166,36 +162,35 @@ Deployment: Netlify.
 - **[1 September 2026]** — Added README with project overview, goals, and references.
 - **[6 October 2026]** — Part 1 feedback: I was meant to do my work on my own and not rely so heavily on AI to do it for me and I did just that in the sense that I did use AI to help me but not rely on it to do the assignment for me.
 - **[6 October 2026]** — Rebuilt `css/style.css` from the Part 1 starter into a full stylesheet: CSS reset, `:root` design tokens, typography scale and base styles.
-- **[6 October 2026]** — Added desktop layout using Flexbox (header, nav, impact cards) and CSS Grid (two-column sections).
-- **[6 October 2026]** — Added decoration and colour styles: borders, border-radius, box-shadow, hero gradient and page banners.
-- **[6 October 2026]** — Added `:hover`, `:focus`, `:focus-visible` and `:active` styles for links, buttons, cards and form fields, plus `:user-valid`/`:user-invalid` form feedback.
-- **[6 October 2026]** — Added tablet (1024px) and mobile (600px) media queries: stacked navigation, single-column layouts, adjusted font sizes and full-width buttons.
-- **[6 October 2026]** — Added two Pexels photos to `images/`, resized into small and large versions with descriptive file names.
+- **[6 October 2026]** — Added desktop layout using Flexbox and CSS Grid.
+- **[6 October 2026]** — Added decoration and colour styles.
+- **[6 October 2026]** — Added `:hover`, `:focus`, `:focus-visible` and `:active` styles for links, buttons, cards and form fields, plus `:user-valid`/`:user-invalid` for form feedback.
+- **[6 October 2026]** — Added tablet (1024px) and mobile (600px) media queries, stacked navigation, single-column layouts, adjusted font sizes and full-width buttons.
+- **[6 October 2026]** — Added Pexels photos to `images/`, resized into small and large versions with descriptive file names.
 - **[6 October 2026]** — Added a hero image to `index.html` using `srcset` and `sizes`, and a volunteer photo to `about.html` using the `<picture>` element, with alt text and photo credits.
 - **[6 October 2026]** — Added image and caption styles (`object-fit`, `max-width`, `border-radius`) and smaller image heights for mobile.
-- **[6 October 2026]** — Added responsive testing screenshots to the `screenshots/` folder and a responsive section to the README.
-   - **[2 November 2026]** — Added meta keywords to all five pages and rewrote the title tags to include relevant keywords.
-   - **[2 November 2026]** — Replaced the contact page map placeholder with an interactive Leaflet map (js/map.js) showing the Cape Town and Johannesburg warehouses, with popups.
-   - **[2 November 2026]** — Added a JavaScript FAQ accordion (js/accordion.js) to services.html, with matching CSS.
-   - **[2 November 2026]** — Fixed the js folder structure (files were nested in a duplicate js folder) and removed a duplicated call-to-action section on services.html.
-   - **[2 November 2026]** — Rebuilt the enquiry form in enquiry.html with extra controls (radio buttons for closest warehouse, number input for group size, consent checkbox) and added novalidate so JavaScript handles validation.
-- **[2 November 2026]** — Added js/enquiry.js: validates name, email, phone (10 digits starting with 0), enquiry type, warehouse, group size (1 to 50), message length and consent, with an error message under each invalid field.
-- **[2 November 2026]** — Added a personalised response on the enquiry page based on enquiry type, warehouse and group size (volunteer, donor or beneficiary organisation).
-- **[2 November 2026]** — Added CSS for error messages, invalid field highlighting and the response box.
-- **[2 November 2026]** — Rebuilt the contact form in contact.html with novalidate and error message spans, and changed the message-type option values so they can be used directly in the email.
-- **[2 November 2026]** — Added js/contact.js: validates name, email, optional phone (10 digits starting with 0), message type and message length (10 to 500 characters), showing an error under each invalid field.
-- **[2 November 2026]** — Added email compilation to js/contact.js: once valid, the details are built into a mailto link addressed to the recipient set in the code, shown as a preview, and opened in the visitor's email app.
-- **[2 November 2026]** — Added CSS for the email preview box.
-   - **[4 November 2026]** — Added robots.txt and sitemap.xml to the project root to help search engines crawl the site, and linked the sitemap inside robots.txt.
-   - **[4 November 2026]** — Deployed the website to Netlify and tested the pages, navigation, map, accordion and both forms on the live URL.
+- **[6 October 2026]** — Added responsive testing screenshots to the `screenshots/` folder and updated README.
+   - **[2 November 2026]** — Added meta keywords to all pages and rewrote title tags to include relevant keywords.
+   - **[2 November 2026]** — Replaced the contact page map placeholder with an interactive Leaflet map (js/map.js) showing the Cape Town and Johannesburg warehouses.
+   - **[2 November 2026]** — Added a JavaScript FAQ accordion (js/accordion.js) to services.html, with corresponding CSS.
+   - **[2 November 2026]** — Fixed the js folder structure.
+   - **[2 November 2026]** — Rebuilt the enquiry form in enquiry.html with extra controls and added novalidate so JavaScript handles validation.
+- **[2 November 2026]** — Added js/enquiry.js, enquiry type, warehouse, group size, message length and consent, with an error message under each invalid field.
+- **[2 November 2026]** — Added a personalised response on the enquiry page based on enquiry type, warehouse and group size .
+- **[2 November 2026]** — Added CSS for error messages, invalid field highlighting and response box.
+- **[2 November 2026]** — Rebuilt the contact form in contact.html with novalidate and error message spans, and changed the message-type option values.
+- **[2 November 2026]** — Added js/contact.js: validates name, email, optional phone , message type and message length , showing an error under each invalid field.
+- **[2 November 2026]** — Added email compiling to js/contact.js:the details are built into a mailto link of the recipient set in the code, shown as a preview and opened in visitor's email app.
+- **[2 November 2026]** — CSS for the email preview box.
+   - **[4 November 2026]** — robots.txt and sitemap.xml added to project root, and linked sitemap inside robots.txt.
+   - **[4 November 2026]** — Deployed website to Netlify and tested everything on the live URL.
 - **[4 November 2026]** — Part 2 feedback: no feedback had been released at the time of submission, due to my Part 2 not being marked due to a late submission.
-- **[4 November 2026]** — Added four optimised, descriptively named photos to images/ with alt text and photo credits.
-- **[4 November 2026]** — Added a gallery section to about.html and js/lightbox.js, which opens a photo in a larger pop-up (native dialog element) with next, previous, close, keyboard and click-outside controls, plus matching CSS.
-- **[4 November 2026]** — Added four Pexels photos to images/ with descriptive file names, alt text and photo credits, and added their references to the README.
-- **[4 November 2026]** — Put the reference list in alphabetical order and standardised the Harvard formatting of every entry, adding 2021a and 2021b for two sources by the same author in the same year.
-- **[4 November 2026]** — Renamed the four gallery photos in images/ to descriptive, lowercase, hyphenated file name for SEO and consistency, and updated the matching src paths in about.html.
-- **[5 November 2026]** — Added a Programme Directory to services.html and js/search.js: the cards are built dynamically from a JavaScript array, with live keyword search, a category filter, A to Z / Z to A sorting, a result count and a no-results message.
-- **[5 November 2026]** — Added CSS for the directory controls and cards, including a single-column layout on mobile.
+- **[4 November 2026]** — Added four Pexels photos to images and added their references to README.
+- **[4 November 2026]** — Added a gallery section to about.html and js/lightbox.js, which opens a photo in a larger pop-up with next, previous, close, keyboard and click-outside controls, including corresponding CSS.
+- **[4 November 2026]** — Adjusted reference list in alphabetical order.
+- **[4 November 2026]** — Renamed the four gallery photos in images to descriptive file names for SEO and consistency and updated the corresponding src paths in about.html.
+- **[5 November 2026]** —Programme Directory to services.html and js/search.js.
+- **[5 November 2026]** — CSS for the directory controls and cards including a single-column layout on mobile.
 
 ## References
 BRAC (2026) *South Africa*. Available at: https://www.brac.net/global-impact/south-africa/ [Accessed: 2 September 2026].

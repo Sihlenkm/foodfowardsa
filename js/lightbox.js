@@ -9,9 +9,9 @@ const lightboxCaption = document.getElementById("lightbox-caption");
 // Remembers which photo is showing
 let currentIndex = 0;
 
-// Puts the photo with the given number into the pop-up
+// Puts photo with given number into pop-up
 function showImage(index) {
-  // Loop round: after the last photo go to the first, and the reverse
+  // Loop round
   if (index < 0) {
     index = items.length - 1;
   } else if (index >= items.length) {
@@ -25,7 +25,7 @@ function showImage(index) {
   lightboxCaption.textContent = items[index].dataset.caption;
 }
 
-// Clicking a thumbnail opens the pop-up on that photo
+// Clicking thumbnail opens the pop-up on that photo
 items.forEach(function (item, index) {
   item.addEventListener("click", function () {
     showImage(index);
@@ -51,7 +51,7 @@ lightbox.addEventListener("click", function (event) {
   }
 });
 
-// Arrow keys move between photos while the pop-up is open (Escape closes it by default)
+// Arrow keys move between photos while the pop-up is open
 document.addEventListener("keydown", function (event) {
   if (!lightbox.open) {
     return;

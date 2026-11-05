@@ -1,10 +1,10 @@
 // js/enquiry.js
-// Validates the enquiry form and shows a personalised response.
+// Validates the enquiry form and shows personalised response.
 
 const form = document.getElementById("enquiry-form");
 const responseBox = document.getElementById("enquiry-response");
 
-// Readable names for the values stored in the form
+// Readable names for the values stored 
 const warehouseNames = {
   "cape-town": "Cape Town (Montague Gardens)",
   "johannesburg": "Johannesburg (Chloorkop)"
@@ -16,7 +16,7 @@ const typeLabels = {
   partner: "Registering as a beneficiary organisation"
 };
 
-// ---------- Error helpers ----------
+// Error helpers 
 
 // Writes a message under a field and marks its group as invalid
 function showError(id, message) {
@@ -25,7 +25,7 @@ function showError(id, message) {
   errorSpan.closest(".form-group").classList.add("has-error");
 }
 
-// Removes every error message from the form
+// Removes every error message from form
 function clearErrors() {
   form.querySelectorAll(".error-message").forEach(function (span) {
     span.textContent = "";
@@ -33,7 +33,7 @@ function clearErrors() {
   });
 }
 
-// Clears one field's error as soon as the user edits it
+// Clears one field's error as soon as user edits it
 function clearGroup(event) {
   const group = event.target.closest(".form-group");
   if (group) {
@@ -44,14 +44,14 @@ function clearGroup(event) {
 form.addEventListener("input", clearGroup);
 form.addEventListener("change", clearGroup);
 
-// ---------- Validation ----------
+// Validation 
 
-// Checks every field. Returns true only if all of them are valid.
+// Checks every field and returns true only if all of them are valid.
 function validateForm() {
   clearErrors();
   let isValid = true;
 
-  // Full name: letters, spaces, hyphens and apostrophes, at least 2 characters
+  // Full name
   const fullName = document.getElementById("full-name").value.trim();
   if (fullName.length < 2) {
     showError("full-name", "Please enter your full name (at least 2 characters).");
@@ -61,7 +61,7 @@ function validateForm() {
     isValid = false;
   }
 
-  // Email: something@something.something
+  // Email
   const email = document.getElementById("email").value.trim();
   if (email === "") {
     showError("email", "Please enter your email address.");
@@ -71,7 +71,7 @@ function validateForm() {
     isValid = false;
   }
 
-  // Phone: South African format, 10 digits starting with 0
+  // Phone
   const phone = document.getElementById("phone").value.replace(/\s/g, "");
   if (phone === "") {
     showError("phone", "Please enter your phone number.");
@@ -81,19 +81,19 @@ function validateForm() {
     isValid = false;
   }
 
-  // Enquiry type: an option must be chosen
+  // Enquiry type
   if (document.getElementById("enquiry-type").value === "") {
     showError("enquiry-type", "Please choose what you are interested in.");
     isValid = false;
   }
 
-  // Warehouse: one radio button must be selected
+  // Warehouse
   if (!form.querySelector('input[name="warehouse"]:checked')) {
     showError("warehouse", "Please choose your closest warehouse.");
     isValid = false;
   }
 
-  // Group size: a whole number from 1 to 50
+  // Group size
   const groupValue = document.getElementById("group-size").value;
   const groupSize = Number(groupValue);
   if (groupValue === "") {
@@ -104,7 +104,7 @@ function validateForm() {
     isValid = false;
   }
 
-  // Message: 10 to 500 characters
+  // Message
   const message = document.getElementById("message").value.trim();
   if (message.length < 10) {
     showError("message", "Please tell us a little more (at least 10 characters).");
@@ -123,7 +123,7 @@ function validateForm() {
   return isValid;
 }
 
-// ---------- Response ----------
+//  Response 
 
 // Chooses the reply text based on the enquiry type, warehouse and group size
 function getReplyText(data) {
@@ -163,7 +163,7 @@ function showResponse(data) {
   const reply = document.createElement("p");
   reply.textContent = getReplyText(data);
 
-  // Summary list of what the visitor submitted
+  // Summary list of what visitor submitted
   const list = document.createElement("ul");
   const items = [
     "Enquiry type: " + typeLabels[data.type],
@@ -183,15 +183,15 @@ function showResponse(data) {
   responseBox.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
-// ---------- Submit ----------
+//Submit
 
 form.addEventListener("submit", function (event) {
-  // Stop the page from reloading
+  // Stop page from reloading
   event.preventDefault();
 
   if (!validateForm()) {
     responseBox.hidden = true;
-    // Move the cursor to the first field with a problem
+    // Move cursor to first field with problem
     const firstBad = form.querySelector(".has-error input, .has-error select, .has-error textarea");
     if (firstBad) {
       firstBad.focus();
@@ -199,7 +199,7 @@ form.addEventListener("submit", function (event) {
     return;
   }
 
-  // Collect the valid answers
+  // Collect valid answers
   const data = {
     fullName: document.getElementById("full-name").value.trim(),
     email: document.getElementById("email").value.trim(),
