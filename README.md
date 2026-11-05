@@ -46,7 +46,7 @@ The project is being developed in three parts:
 |------|-------|--------|
 | Part 1 | Planning, proposal, HTML structure | Complete |
    | Part 2 | CSS styling, responsive design | Complete |
-   | Part 3 | JavaScript, SEO, forms, deployment | In progress |
+   | Part 3 | JavaScript, SEO, forms, deployment | Complete |
 
 ## Sitemap
 See `docs/sitemap.svg` / `docs/sitemap.png` for the full visual sitemap.
@@ -150,6 +150,10 @@ foodforwardsa/
 ## Part 3 Details
 ### Feedback from Part 2
 - At the time of submitting Part 2 I had submitted late and thus didn't get any marks for the Part 2 I submitted, meaning I also didn't get feedback.
+SEO: title tags, meta descriptions, meta keywords, image names, alt text, robots.txt and sitemap.xml.
+Interactivity: map, accordion, gallery lightbox, programme directory with search, filter and sort.
+Forms: enquiry form and contact form.
+Deployment: Netlify.
 
 ## Changelog
 - **[31 August 2026]** — Initial repository setup: file/folder creation
@@ -233,8 +237,7 @@ screenshots/ folder
 
 AI tool used:
 
-Claude (Sonnet 5.5), Anthropic, via claude.ai
-In-text citation: (Anthropic, 2026)
+Claude (Sonnet 5.5), Anthropic
 Reference: Anthropic (2026) Claude Sonnet 5.5 [Large language model]. Available at:< https://claude.ai> [Accessed: 6 October 2026].
 
 Purpose of use:
@@ -247,27 +250,23 @@ Date of AI use:
 
 Chat evidence:
 
-Screenshots linked
+Screenshots in folder "AI declaration screenshots"
 
 Disclosure of AI Usage in my Assessment (Part 3)
 
 Section(s) where AI was used:
 
 WEDE5020 PoE Part 3
-js/map.js, js/accordion.js, js/enquiry.js
-enquiry.html, contact.html, services.html (meta keywords, map, accordion, enquiry form)
-css/style.css (Part 3 additions)
-README.md (changelog entries)
-Troubleshooting file and folder structure and Git commit steps
+Timeline Guide
+
 
 AI tool used:
 
-Claude (Sonnet 5.5), Anthropic, via claude.ai
-In-text citation: (Anthropic, 2026)
+Claude (Sonnet 5.5), Anthropic
 Reference: Anthropic (2026) Claude Sonnet 5.5 [Large language model]. Available at:< https://claude.ai> [Accessed: 2 November 2026].
 
 Purpose of use:
-Step-by-step guidance and example code for the interactive map, FAQ accordion, enquiry form validation and response, and fixing a 404 error caused by a nested js folder. I typed the code myself, tested it in the browser, and edited it to suit my website.
+Getting help on how long it will take to finish the assignment depending on how much work I have
 
 Date of AI use:
 
@@ -275,4 +274,4 @@ Date of AI use:
 
 Chat evidence:
 
-Screenshots linked
+Screenshots in folder "AI declaration screenshots"
